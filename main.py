@@ -14,7 +14,7 @@ app = Flask("JobScapper")
 
 @app.route("/")
 def home():
-    return 'Hey there!'
+    return 'Hey there!(TEST)'
 
 app.run("127.0.0.1")
 
