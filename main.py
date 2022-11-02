@@ -1,16 +1,23 @@
-from job_korea import get_pages, extract_job_korea
+# from job_korea import get_pages, extract_job_korea
+# from file import save_to_file
 
-user_input = input("Which job are you looking for?")
+# user_input = input("Which job are you looking for?")
 
-get_pages(user_input)
-job_korea = extract_job_korea(user_input)
+# get_pages(user_input)
+# job_korea = extract_job_korea(user_input)
 
-# Write Access
-file = open(f"{user_input}.csv", "w")
+# save_to_file(user_input, job_korea)
 
-# Header
-file.write("Company, Experience, Education, Location, Link\n")
+from flask import Flask
 
-for job in job_korea:
-  file.write(f"{job['company']}, {job['experience']}, {job['education']}, {job['location']}, {job['link']}\n")
-file.close()
+app = Flask("JobScapper")
+
+@app.route("/")
+def home():
+    return 'Hey there!'
+
+app.run("127.0.0.1")
+
+
+
+
