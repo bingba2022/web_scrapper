@@ -56,12 +56,13 @@ def extract_job_korea(keyword):
             }
             results.append(job_data)
 
-    for result in results:
-      print (result)
-      print ("\n//////\n")
+    # for result in results:
+    #   print (result)
+    #   print ("\n//////\n")
 
     num_of_results = len(results)
     print (f"{num_of_results} results in total")
+    return (results)
 
 # extract_job_korea("developer")
 
